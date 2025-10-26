@@ -1,9 +1,9 @@
 from fastapi import APIRouter, UploadFile, File, Depends, HTTPException
 from sqlalchemy.orm import Session
 import csv, io
-from ..database import get_db
-from ..models import Customer
-from ..auth import require_uploader
+from .database import get_db
+from .models import Customer
+from .auth import require_uploader
 
 router = APIRouter(prefix="/upload", tags=["upload"]) 
 

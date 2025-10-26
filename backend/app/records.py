@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from ..database import get_db
-from ..models import Customer
-from ..schemas import CustomerOut
-from ..auth import require_role 
+from .database import get_db
+from .models import Customer
+from .schemas import CustomerOut
+from .auth import require_role 
 
 router = APIRouter(prefix="/records", tags=["records"])
 

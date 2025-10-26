@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .database import Base, engine
-from .routes import upload, records
+from . import upload, records
 
 Base.metadata.create_all(bind=engine)
 
