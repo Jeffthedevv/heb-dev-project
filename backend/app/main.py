@@ -14,6 +14,12 @@ app.add_middleware(
   allow_methods=["*"],
   allow_headers=["*"],
 )
-
+#routers
 app.include_router(upload.router)
 app.include_router(records.router)
+
+# Health check endpoint
+@app.get("/")
+def health():
+  return {"ok": True, "message": "HEB Panel API running"}
+

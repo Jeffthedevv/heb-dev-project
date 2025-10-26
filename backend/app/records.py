@@ -16,6 +16,13 @@ async def list_records(
   db: Session = Depends(get_db),
   role: str = Depends(require_role),
 ):
+  """
+  Return paginated customers, optionally filtered by name.
+  Notes:
+    - Uses offset-based pagination for simplicity.
+    - Adds ILIKE filter for case-insensitive search on name.
+    - Sorted by newest first.
+  """
   stmt = select(Customer)
   if q:
     stmt = stmt.filter(Customer.name.ilike(f"%{q}%"))
