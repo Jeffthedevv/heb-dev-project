@@ -1,0 +1,9 @@
+# node / editor
+node_modules
+dist
+.vscode
+.env
+.DS_Store
+
+# docker
+**/.dockerignore
