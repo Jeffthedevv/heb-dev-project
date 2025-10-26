@@ -1,3 +1,4 @@
+import UploadForm from './components/UploadForm'
 import './App.css'
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <div >
       <h1>H-E-B Data Tool</h1>
-      <p>Frontend scaffold is up. Components coming next.</p>
+      <UploadForm />
     </div>
   )
 }
